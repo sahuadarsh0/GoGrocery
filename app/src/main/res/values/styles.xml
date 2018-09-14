@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="MyTheme" parent="Base.MyTheme"></style>
+
+    <style name="Base.MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/bg_light</item>
+    </style>
+
+    <color name="bg_light">#FAFAFA</color>
+
+
+    <style name="MyTheme.AppBarOverlay" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MyTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyTheme.home" parent="Base.MyTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/ldrawer_color</item>
+    </style>
+
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="AndroidImageSlider_Magnifier_Oval_Black">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="shape">oval</item>
+        <item name="padding_left">3dp</item>
+        <item name="padding_right">3dp</item>
+        <item name="padding_top">4dp</item>
+        <item name="padding_bottom">4dp</item>
+        <item name="selected_color">#da4453</item>
+        <item name="unselected_color">#33000000</item>
+        <item name="selected_width">8dp</item>
+        <item name="selected_height">8dp</item>
+        <item name="unselected_width">6dp</item>
+        <item name="unselected_height">6dp</item>
+    </style>
+
+
+</resources>

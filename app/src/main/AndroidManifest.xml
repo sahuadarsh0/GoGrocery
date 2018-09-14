@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.infiniverse.grocery">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/MyTheme">
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="android.app.searchable"
+            android:resource="@xml/searchable" />
+
+        <receiver
+            android:name=".ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Splash"
+            android:noHistory="true"
+            android:theme="@style/MyTheme.AppBarOverlay">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme.home">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".StartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProductDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyCart"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.infiniverse.grocery.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".OrderActivity"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.infiniverse.grocery.HomeActivity" />
+        </activity>
+        <activity android:name=".OrderDetailsActivity"
+            android:parentActivityName=".OrderActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.infiniverse.grocery.OrderActivity" />
+
+        </activity>
+
+        <activity
+            android:name=".ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Category_wise_products"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.infiniverse.grocery.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".SearchResultsActivity"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.infiniverse.grocery.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ChangePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangeClientDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ValidateOTP"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OtpForgetActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

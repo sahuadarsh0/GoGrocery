@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/profile_background"
+        android:elevation="2dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="68dp"
+            android:fontFamily="sans-serif"
+            android:text="Nearest Kirana Store"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="profile@grocery.com"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvMob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEmail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="sans-serif-light"
+            android:text="9090909090"
+            android:textSize="16sp" />
+
+        <TextView
+
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMob"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:lines="3"
+            android:text="GoGrocery Store,  Bilaspur, Chhattisgarh"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <Space
+            android:id="@+id/spaceHolder"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:layout_below="@id/tvMob"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btnChangePSW"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tvAddress"
+            android:layout_marginBottom="16dp"
+            android:layout_toLeftOf="@id/spaceHolder"
+            android:layout_toStartOf="@id/spaceHolder"
+            android:background="@drawable/message_button"
+            android:fontFamily="sans-serif-medium"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:text="change password"
+            android:textColor="@color/colorButton"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnChangeDetails"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tvAddress"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@id/spaceHolder"
+            android:layout_toRightOf="@id/spaceHolder"
+            android:background="@drawable/connect_button"
+            android:fontFamily="sans-serif-medium"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:text="Change Details"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/photoHeader"
+        layout="@layout/photo_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/relativeLayout"
+        app:layout_anchorGravity="top|center" />
+</android.support.design.widget.CoordinatorLayout>

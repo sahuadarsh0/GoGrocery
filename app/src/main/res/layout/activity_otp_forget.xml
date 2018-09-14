@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="app.infiniverse.grocery.OtpForgetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/nav_header_bg" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="40dp"
+        android:elevation="6dp"
+        app:cardElevation="5dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box2">
+
+            <EditText
+                android:id="@+id/otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="38dp"
+                android:ems="10"
+                android:hint="Enter Otp"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/new_psw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/otp"
+                android:layout_below="@+id/otp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="New Password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/conf_psw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/new_psw"
+                android:layout_below="@+id/new_psw"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_background"
+                android:layout_alignEnd="@+id/conf_psw"
+                android:layout_below="@+id/conf_psw"
+                android:layout_marginTop="26dp"
+                android:textColor="@color/color_black_light"
+                android:text="Change" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</android.support.v7.widget.CardView>
+

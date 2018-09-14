@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The background image of Tokyo we will use -->
+    <item android:height="240dp">
+        <bitmap
+            android:src="@drawable/nav_header_bg" />
+    </item>
+
+    <!-- Create the gradient so that the this background starts of transparent
+         and gradually fades to into background. This will make the picture look
+         like it is gradually fading -->
+    <item android:height="240dp">
+        <shape
+            android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="@android:color/transparent"
+                android:endColor="@android:color/white">
+            </gradient>
+        </shape>
+    </item>
+</layer-list>

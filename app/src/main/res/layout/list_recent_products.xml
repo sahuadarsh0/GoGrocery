@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/product_card"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginBottom="1dp"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <ImageView
+                android:id="@+id/product_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/watermark_icon" />
+
+            <TextView
+                android:id="@+id/discount"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box5"
+                android:maxLines="2"
+                android:padding="10dp"
+                android:text="25"
+                android:textAlignment="center"
+                android:textColor="#efefef"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/product_detail"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="marquee"
+                android:focusable="false"
+                android:freezesText="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Product Name"
+                android:textColor="@android:color/background_dark"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/product_short_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_name"
+                android:layout_marginTop="2dp"
+                android:visibility="gone"
+                android:ellipsize="end"
+                android:focusable="false"
+                android:freezesText="false"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:text="Product description"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/brand_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_short_desc"
+                android:layout_marginTop="5dp"
+                android:ellipsize="marquee"
+                android:focusable="false"
+                android:freezesText="true"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Brand"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/selling_price"
+                android:layout_toEndOf="@+id/selling_price"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="Rs 25"
+                android:textColor="#757575"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/selling_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:singleLine="true"
+                android:text="Rs 20"
+                android:textColor="@android:color/background_dark"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/product_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/box51"
+                android:ellipsize="marquee"
+                android:freezesText="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="ADD"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/product_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

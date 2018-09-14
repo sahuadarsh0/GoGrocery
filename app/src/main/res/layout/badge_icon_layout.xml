@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/icon_badge"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_shopping_cart_black" />
+
+
+        <FrameLayout
+            android:id="@+id/counterValuePanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|top">
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

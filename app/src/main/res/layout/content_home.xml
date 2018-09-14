@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="app.infiniverse.grocery.HomeActivity"
+    tools:showIn="@layout/activity_home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@color/ldrawer_color"
+                    custom:auto_cycle="true"
+                    custom:indicator_visibility="visible"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    custom:pager_animation="Default"
+                    custom:pager_animation_span="1100" />
+
+                <com.daimajia.slider.library.Indicators.PagerIndicator
+
+                    android:id="@+id/custom_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="165dp"
+                    android:gravity="center"
+                    custom:selected_color="#DA4453"
+                    custom:selected_height="6dp"
+                    custom:selected_padding_left="5dp"
+                    custom:selected_padding_right="5dp"
+                    custom:selected_width="6dp"
+                    custom:shape="oval"
+                    custom:unselected_color="#55333333"
+                    custom:unselected_height="6dp"
+                    custom:unselected_padding_left="5dp"
+                    custom:unselected_padding_right="5dp"
+                    custom:unselected_width="6dp" />
+
+                <LinearLayout
+                    android:id="@+id/delivery_text_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/slider"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/box2">
+
+                    <TextView
+                        android:id="@+id/delivery_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autoSizeTextType="uniform"
+                        android:drawablePadding="5dp"
+                        android:drawableStart="@drawable/ic_bus"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:text="STANDARD DELIVERY WITHIN 2-4 HOURS" />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/delivery_text_box"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="0dp"
+                    android:minHeight="480dp"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/box4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_sans"
+                            android:gravity="center"
+                            android:paddingBottom="7dp"
+                            android:paddingTop="7dp"
+                            android:text="Best Deals"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_best_selling"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:background="#d2d2d2"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/recyclerview_best_deals"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <!---->
+                        <!--<GridView-->
+                        <!--android:id="@+id/gridView"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:clickable="true"-->
+                        <!--android:columnWidth="100dp"-->
+                        <!--android:drawSelectorOnTop="true"-->
+                        <!--android:focusable="true"-->
+                        <!--android:gravity="center"-->
+                        <!--android:horizontalSpacing=".2dp"-->
+                        <!--android:numColumns="auto_fit"-->
+                        <!--android:stretchMode="columnWidth"-->
+                        <!--android:verticalSpacing="1.2dp" />-->
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="620dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans"
+                        android:gravity="center"
+                        android:paddingBottom="7dp"
+                        android:paddingTop="7dp"
+                        android:text="Recently Added Products"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                    <GridView
+                        android:id="@+id/gridView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:columnWidth="100dp"
+                        android:drawSelectorOnTop="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:horizontalSpacing=".2dp"
+                        android:numColumns="auto_fit"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="1.2dp" />
+
+                    <!--<LinearLayout-->
+                    <!--android:id="@+id/ll_recent_products"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginEnd="8dp"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:background="#d2d2d2"-->
+                    <!--android:orientation="vertical">-->
+
+
+                    <!---->
+
+                    <!--&lt;!&ndash;<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/recyclerview_recent_products"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+                    <!--</LinearLayout>-->
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

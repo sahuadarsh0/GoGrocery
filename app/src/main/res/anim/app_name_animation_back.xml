@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017. http://hiteshsahu.com- All Rights Reserved
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited
+  ~ If you use or distribute this project then you MUST ADD A COPY OF LICENCE
+  ~ along with the project.
+  ~  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
+  -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:fillEnabled="true">
+
+    <translate
+        android:duration="400"
+        android:fromXDelta="0%"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:startOffset="100"
+        android:toXDelta="-200%" />
+
+    <alpha
+        android:duration="400"
+        android:fromAlpha="1"
+        android:startOffset="100"
+        android:toAlpha="0" />
+
+</set>

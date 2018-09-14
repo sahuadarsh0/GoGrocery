@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.infiniverse.grocery.HomeActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_home" />
+
+
+</android.support.design.widget.CoordinatorLayout>

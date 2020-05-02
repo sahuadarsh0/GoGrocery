@@ -31,7 +31,7 @@
         android:visibility="gone">
 
 
-        <androidx.appcompat.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview_item_products"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -46,7 +46,7 @@
         android:gravity="bottom|end">
 
 
-        <androidx.constraintlayout.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="fill_parent"
             android:layout_height="60dp"
             android:layout_gravity="bottom"
@@ -111,7 +111,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-        </androidx.constraintlayout.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
     <LinearLayout

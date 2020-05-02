@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/nav_header_bg" />
 
-    <androidx.appcompat.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_gravity="center"
         android:layout_margin="40dp"
@@ -69,6 +69,6 @@
                 android:textColor="@color/color_black_light"
                 android:text="Change" />
         </RelativeLayout>
-    </androidx.appcompat.widget.CardView>
-</androidx.appcompat.widget.CardView>
+    </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>
 

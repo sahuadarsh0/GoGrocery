@@ -31,7 +31,7 @@
             android:visibility="gone">
 
 
-            <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            <androidx.appcompat.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/recyclerview_item_orders"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -46,7 +46,7 @@
             android:gravity="bottom|end">
 
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.ConstraintLayout
                 android:layout_width="fill_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="bottom"
@@ -98,7 +98,7 @@
 
 
 
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.ConstraintLayout>
         </LinearLayout>
 
 </LinearLayout>

@@ -44,14 +44,14 @@
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".HomeActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/MyTheme.home">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -63,65 +63,65 @@
         </activity>
         <activity
             android:name=".StartActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".ProductDetailActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".MyCart"
             android:parentActivityName=".HomeActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
+                android:name="PARENT_ACTIVITY"
                 android:value="app.infiniverse.grocery.HomeActivity" />
         </activity>
         <activity
             android:name=".OrderActivity"
             android:parentActivityName=".HomeActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
+                android:name="PARENT_ACTIVITY"
                 android:value="app.infiniverse.grocery.HomeActivity" />
         </activity>
         <activity android:name=".OrderDetailsActivity"
             android:parentActivityName=".OrderActivity">
 
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
+                android:name="PARENT_ACTIVITY"
                 android:value="app.infiniverse.grocery.OrderActivity" />
 
         </activity>
 
         <activity
             android:name=".ProfileActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Category_wise_products"
             android:parentActivityName=".HomeActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
+                android:name="PARENT_ACTIVITY"
                 android:value="app.infiniverse.grocery.HomeActivity" />
         </activity>
         <activity
             android:name=".SearchResultsActivity"
             android:parentActivityName=".HomeActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
+                android:name="PARENT_ACTIVITY"
                 android:value="app.infiniverse.grocery.HomeActivity" />
         </activity>
         <activity
             android:name=".ChangePassword"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".ChangeClientDetail"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".ValidateOTP"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".ForgetActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".OtpForgetActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
     </application>
 
 </manifest>

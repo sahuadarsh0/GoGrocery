@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Paint;
 import android.os.AsyncTask;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
@@ -33,8 +35,8 @@ import java.net.URLEncoder;
 public class Cart_Item_Adapter extends RecyclerView.Adapter<Cart_Item_Adapter.ProductsViewHolder> {
 
     public static final String PREFS = "PREFS";
-    Context context;
-    SharedPreferences sp;
+    private Context context;
+    private SharedPreferences sp;
     private String[] product_id;
     private String[] product_name;
     private String[] product_desc;
@@ -47,7 +49,7 @@ public class Cart_Item_Adapter extends RecyclerView.Adapter<Cart_Item_Adapter.Pr
     private TextView total_saving;
     private TextView total_pamt;
 
-    public Cart_Item_Adapter(String[] product_id, String[] product_name, String[] product_desc, String[] product_img, String[] product_price, String[] product_brand, String[] product_sp, String[] product_dp, String[] product_qty,TextView total_saving,TextView total_pamt, Context context) {
+    Cart_Item_Adapter(String[] product_id, String[] product_name, String[] product_desc, String[] product_img, String[] product_price, String[] product_brand, String[] product_sp, String[] product_dp, String[] product_qty, TextView total_saving, TextView total_pamt, Context context) {
         this.product_id = product_id;
         this.product_name = product_name;
         this.product_desc = product_desc;
@@ -62,6 +64,7 @@ public class Cart_Item_Adapter extends RecyclerView.Adapter<Cart_Item_Adapter.Pr
         this.total_pamt=total_pamt;
     }
 
+    @NonNull
     @Override
     public ProductsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());

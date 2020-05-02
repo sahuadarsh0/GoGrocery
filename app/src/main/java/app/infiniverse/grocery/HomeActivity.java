@@ -62,13 +62,13 @@ import java.util.Iterator;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity
-        implements BaseSliderView.OnSliderClickListener,AddorRemoveCallbacks {
+        implements BaseSliderView.OnSliderClickListener, AddorRemoveCallbacks {
 
     SliderLayout sliderShow;
-    private static int cart_count=0;
+    private static int cart_count = 0;
     HashMap<String, String> url_maps = new HashMap<>();
 
-        private GridView mGridView;
+    private GridView mGridView;
     private ProgressBar mProgressBar;
     List<String> bsp_id_list = new ArrayList<String>();
     private Bsp_Grid mGridAdapter;
@@ -90,7 +90,7 @@ public class HomeActivity extends AppCompatActivity
         sp = getApplicationContext().getSharedPreferences(PREFS, MODE_PRIVATE);
         editor = sp.edit();
         l2 = findViewById(R.id.ll_best_selling);
-        mProgressBar =findViewById(R.id.progressBar);
+        mProgressBar = findViewById(R.id.progressBar);
 
 
         handleIntent(getIntent());
@@ -170,7 +170,7 @@ public class HomeActivity extends AppCompatActivity
                                 startActivity(i);
 
                             } else if (drawerItem.getTag().toString().equals("LOG_OUT")) {
-                                cart_count=0;
+                                cart_count = 0;
                                 invalidateOptionsMenu();
                                 editor.clear().apply();
                                 Intent i = new Intent(HomeActivity.this, StartActivity.class);
@@ -182,8 +182,8 @@ public class HomeActivity extends AppCompatActivity
                             } else if (drawerItem.getTag().toString().equals("SUB_CATEGORIES")) {
                                 Intent intent = new Intent(HomeActivity.this, Category_wise_products.class);
                                 intent.putExtra("sub_cat_id", String.valueOf(drawerItem.getIdentifier()));
-                                intent.putExtra("cart_count",""+cart_count);
-                                intent.putExtra("sub_category", ((Nameable)drawerItem).getName().toString());
+                                intent.putExtra("cart_count", "" + cart_count);
+                                intent.putExtra("sub_category", ((Nameable) drawerItem).getName().toString());
                                 startActivity(intent);
                             }
                         }
@@ -205,12 +205,9 @@ public class HomeActivity extends AppCompatActivity
             result.addStickyFooterItem(new PrimaryDrawerItem().withName("Log Out").withIcon(R.drawable.ic_log_out).withTag("LOG_OUT"));
 
 
-
-
         } else {
             result.addStickyFooterItem(new PrimaryDrawerItem().withName("Log In").withIcon(R.drawable.ic_person_black).withTag("LOGIN"));
         }
-
 
 
         result.addItem(new DividerDrawerItem());
@@ -255,12 +252,12 @@ public class HomeActivity extends AppCompatActivity
                     while (temp.hasNext()) {
                         String key = temp.next();
                         JSONArray sub_cat = json_data.getJSONArray(key);
-                        ExpandableDrawerItem item = new ExpandableDrawerItem().withName(key.replace("&amp;","&")).withIcon(R.drawable.ic_filter_list_black).withIdentifier(0).withSelectable(false).withTag("CATEGORIES");
+                        ExpandableDrawerItem item = new ExpandableDrawerItem().withName(key.replace("&amp;", "&")).withIcon(R.drawable.ic_filter_list_black).withIdentifier(0).withSelectable(false).withTag("CATEGORIES");
                         JSONObject sub_cat_json_data = new JSONObject();
                         for (int i = 0; i < sub_cat.length(); i++) {
                             sub_cat_json_data = sub_cat.getJSONObject(i);
 //                            product_ids[i] = json_data.getString("id");
-                            item.withSubItems(new SecondaryDrawerItem().withLevel(2).withName(sub_cat_json_data.getString("sub_category").replace("&amp;","&")).withIcon(R.drawable.ic_minus_black).withIdentifier(Integer.parseInt(sub_cat_json_data.getString("id"))).withTag("SUB_CATEGORIES"));
+                            item.withSubItems(new SecondaryDrawerItem().withLevel(2).withName(sub_cat_json_data.getString("sub_category").replace("&amp;", "&")).withIcon(R.drawable.ic_minus_black).withIdentifier(Integer.parseInt(sub_cat_json_data.getString("id"))).withTag("SUB_CATEGORIES"));
 
 
                         }
@@ -324,7 +321,7 @@ public class HomeActivity extends AppCompatActivity
 
                             defaultSliderView.bundle(new Bundle());
                             defaultSliderView.getBundle()
-                                    .putString("extra",json_data.getString("product_id"));
+                                    .putString("extra", json_data.getString("product_id"));
 
 
                             sliderShow.addSlider(defaultSliderView);
@@ -622,8 +619,6 @@ public class HomeActivity extends AppCompatActivity
     }
 
 
-
-
     class LoadGridImages extends AsyncTask<Void, Void, String> {
 
         @Override
@@ -643,10 +638,10 @@ public class HomeActivity extends AppCompatActivity
                 for (int i = 0; i < jArray.length(); i++) {
 
                     json_data = jArray.getJSONObject(i);
-                    String title="Nothing";
-                    if(json_data.getString("name").length()>20) {
+                    String title = "Nothing";
+                    if (json_data.getString("name").length() > 20) {
                         title = json_data.getString("name").substring(0, 19);
-                    }else{
+                    } else {
                         title = json_data.getString("name");
                     }
                     item = new GridItem();
@@ -732,10 +727,10 @@ public class HomeActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.home, menu);
 
         final MenuItem menuItem = menu.findItem(R.id.cart);
-        menuItem.setIcon(Converter.convertLayoutToImage(HomeActivity.this,cart_count,R.drawable.ic_shopping_cart_white));
+        menuItem.setIcon(Converter.convertLayoutToImage(HomeActivity.this, cart_count, R.drawable.ic_shopping_cart_white));
 
 
-        if(sp.getString("loginid",null)!=null){
+        if (sp.getString("loginid", null) != null) {
             class GetCartItemCount extends AsyncTask<String, Void, String> {
 
                 @Override
@@ -747,7 +742,7 @@ public class HomeActivity extends AppCompatActivity
                 protected void onPostExecute(String s) {
                     super.onPostExecute(s);
                     cart_count = Integer.parseInt(s);
-                    menuItem.setIcon(Converter.convertLayoutToImage(HomeActivity.this,cart_count,R.drawable.ic_shopping_cart_white));
+                    menuItem.setIcon(Converter.convertLayoutToImage(HomeActivity.this, cart_count, R.drawable.ic_shopping_cart_white));
                 }
 
                 @Override
@@ -783,7 +778,7 @@ public class HomeActivity extends AppCompatActivity
 
             //creating asynctask object and executing it
             GetCartItemCount catItemObj = new GetCartItemCount();
-            catItemObj.execute(sp.getString("loginid",null));
+            catItemObj.execute(sp.getString("loginid", null));
         }
 
         SearchManager searchManager =
@@ -803,19 +798,18 @@ public class HomeActivity extends AppCompatActivity
         if (id == R.id.cart) {
 
 
-
-            if(sp.getString("loginid",null)!=null) {
+            if (sp.getString("loginid", null) != null) {
                 Intent i = new Intent(this, MyCart.class);
                 startActivity(i);
                 return true;
-            }else{
+            } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
                 builder.setTitle("Heyy..")
                         .setMessage("To see your cart you have to login first. Do you want to login ")
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent intent=new Intent(HomeActivity.this,LoginActivity.class);
+                                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                                 startActivity(intent);
                             }
                         })
@@ -837,7 +831,7 @@ public class HomeActivity extends AppCompatActivity
     @Override
     public void onSliderClick(BaseSliderView slider) {
 
-        String product_id=slider.getBundle().get("extra").toString();
+        String product_id = slider.getBundle().get("extra").toString();
         Product detail = new Product();
         detail.startProductDetailActivity(product_id, HomeActivity.this);
 
@@ -862,8 +856,6 @@ public class HomeActivity extends AppCompatActivity
             //use the query to search your data somehow
         }
     }
-
-
 
 
     @Override

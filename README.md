@@ -1,7 +1,6 @@
 # GoGrocery
-*Attention :* This version/branch of app has now been deprecated, Check for other branches
-Its an eCommerce app inspired from Amazon, big Basket, Grofers
-, Flipkart Etc
+**Attention :** This version/branch of app has now been deprecated, Check for other branches
+##### Its an eCommerce app inspired from Amazon, big Basket, Grofers, Flipkart Etc
 
 
 ### Connect with me 

@@ -1,11 +1,13 @@
 # GoGrocery
-Its an eCommerce app inspired from Amazon , big Basket,Grofers,Flipkart Etc
+*Attention :* This version/branch of app has now been deprecated, Check for other branches
+Its an eCommerce app inspired from Amazon, big Basket, Grofers
+, Flipkart Etc
 
 
 ### Connect with me 
 [![Linkedin](https://img.shields.io/badge/-Adarsh%20Sahu-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/sahuadarsh0/)](https://www.linkedin.com/in/sahuadarsh0/)
 [![Gmail](https://img.shields.io/badge/-sahuadarsh0@gmail.com-gray?style=flat-square&logo=gmail&logoColor=red&link=)](mailto:sahuadarsh0@gmail.com)
-[![TechnitedMinds](https://img.shields.io/badge/-Technited%20Minds-blue?style=flat-square&logoColor=white&link=https://www.technitedminds.com/)](https://www.technitedminds.com/)
+[![Technited Minds](https://img.shields.io/badge/-Technited%20Minds-blue?style=flat-square&logoColor=white&link=http://www.technitedminds.com/)](http://www.technitedminds.com/)
 
 ### Download and install the ![APP](https://github.com/sahuadarsh0/GoGrocery/blob/master/app.apk?raw=true)
 ##### See screenshots for better visuals
